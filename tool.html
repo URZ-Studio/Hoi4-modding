@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="KodiakX HOI4 Modding Tool" />
+  <title>KodiakX | HOI4 Modding Tool</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/home/style.css" />
+  <link rel="stylesheet" href="css/tool/style.css" />
+</head>
+<body>
+  <div class="kodiak-page-shell">
+    <div id="kodiak-header"></div>
+
+    <main class="tool-main">
+      <section class="tool-grid">
+        <aside class="tool-panel tool-panel--left">
+          <div class="tool-toolbar">
+            <button class="kodiak-button kodiak-button--ghost">새 프로젝트</button>
+            <button class="kodiak-button kodiak-button--ghost">열기</button>
+            <button class="kodiak-button kodiak-button--ghost">저장</button>
+            <button class="kodiak-button kodiak-button--ghost">실행</button>
+          </div>
+          <div class="tool-tree" role="tree">
+            <div class="tool-tree__heading">파일 트리</div>
+            <ul>
+              <li>decision.txt</li>
+              <li>event.txt</li>
+              <li>national_focus.txt</li>
+              <li>unit_chart.txt</li>
+              <li>history.txt</li>
+            </ul>
+          </div>
+        </aside>
+
+        <section class="tool-panel tool-panel--center">
+          <div class="tool-canvas">
+            <div class="tool-canvas__title">Block Canvas</div>
+            <div class="tool-canvas__drop">여기에 블록을 드롭하세요.</div>
+          </div>
+        </section>
+
+        <aside class="tool-panel tool-panel--right">
+          <div class="tool-search">
+            <input type="search" placeholder="블록 검색" />
+          </div>
+          <div class="tool-block-list-container">
+            <ul class="tool-block-list">
+              <li class="tool-block-item">if</li>
+              <li class="tool-block-item">set_variable</li>
+              <li class="tool-block-item">add_modifier</li>
+              <li class="tool-block-item">remove_modifier</li>
+              <li class="tool-block-item">trigger_event</li>
+              <li class="tool-block-item">custom_effect</li>
+              <li class="tool-block-item">policy_change</li>
+              <li class="tool-block-item">country_event</li>
+              <li class="tool-block-item">ai_strategy</li>
+            </ul>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <div class="kodiak-backdrop" hidden></div>
+
+    <section class="kodiak-modal" id="support-modal" role="dialog" aria-modal="true" hidden>
+      <div class="kodiak-modal__dialog">
+        <button class="kodiak-modal__close" type="button" aria-label="후원 팝업 닫기" data-close-modal>&times;</button>
+        <h2>후원하기</h2>
+        <p>KodiakX 제작을 응원해주시면 더 빠르게 기능을 추가할 수 있습니다.</p>
+        <div class="kodiak-modal__actions">
+          <a class="kodiak-button kodiak-button--primary kodiak-button--large" href="https://www.paypal.com/" target="_blank" rel="noreferrer">PayPal</a>
+          <a class="kodiak-button kodiak-button--ghost kodiak-button--large" href="https://www.patreon.com/" target="_blank" rel="noreferrer">Patreon</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="kodiak-modal kodiak-modal--consent" id="consent-modal" role="dialog" aria-modal="true" hidden>
+      <div class="kodiak-modal__dialog">
+        <h2>이용 동의</h2>
+        <p>이 사이트는 쿠키 및 로컬 저장소를 사용해 언어 설정 등 상태를 저장합니다.</p>
+        <div class="kodiak-modal__actions">
+          <button class="kodiak-button kodiak-button--primary kodiak-button--large" type="button" data-accept-consent>동의하고 시작하기</button>
+          <button class="kodiak-button kodiak-button--ghost kodiak-button--large" type="button" data-decline-consent>취소</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="js/tool/script.js"></script>
+</body>
+</html>
