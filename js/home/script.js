@@ -153,9 +153,14 @@
     document.addEventListener('click', (event) => {
       const clickedInsideDropdown = event.target.closest('.kodiak-nav__group');
       const clickedInsideModal = event.target.closest('.kodiak-modal__dialog');
+      const clickedInsideNav = event.target.closest('.kodiak-nav') || event.target.closest('.kodiak-mobile-toggle');
 
       if (!clickedInsideDropdown) {
         closeAllDropdowns();
+      }
+
+      if (!clickedInsideNav && nav?.classList.contains('is-mobile-open')) {
+        nav.classList.remove('is-mobile-open');
       }
 
       if (!clickedInsideModal && event.target === backdrop) {
@@ -166,9 +171,8 @@
         closeModal(consentModal);
       }
 
-      hideBackdrop();
-
       if (!hasOpenLayer()) {
+        hideBackdrop();
         lockScroll(false);
       }
     });
@@ -199,6 +203,10 @@
         closeModal(consentModal);
       }
 
+      if (nav?.classList.contains('is-mobile-open')) {
+        nav.classList.remove('is-mobile-open');
+      }
+
       if (!hasOpenLayer()) {
         hideBackdrop();
         lockScroll(false);
@@ -210,14 +218,15 @@
 
       if (!isOpen) {
         closeAllDropdowns();
-        hideBackdrop();
         if (!hasOpenLayer()) {
+          hideBackdrop();
           lockScroll(false);
         }
         return;
       }
 
       showBackdrop();
+      lockScroll(true);
     });
 
     document.addEventListener('keydown', (event) => {
