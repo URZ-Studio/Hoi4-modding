@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="KodiakX HOI4 Modding Tool 랜딩 페이지 베타" />
+  <title>KodiakX | HOI4 Modding Tool</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/home/style.css" />
+</head>
+<body>
+  <div class="kodiak-page-shell">
+    <div id="kodiak-header"></div>
+
+    <main>
+      <section class="kodiak-hero">
+        <div class="kodiak-hero__overlay"></div>
+        <div class="kodiak-hero__inner kodiak-container">
+          <div class="kodiak-hero__content">
+            <p class="kodiak-eyebrow">BLOCK MODDING BETA</p>
+            <h1>HOI4 Modding Tool</h1>
+            <p class="kodiak-hero__text">쉽고 빠르게 모드를 만드는 방법</p>
+            <div class="kodiak-hero__actions">
+              <a class="kodiak-button kodiak-button--ghost kodiak-button--large" href="#">사용법 확인하기</a>
+              <a class="kodiak-button kodiak-button--primary kodiak-button--large" href="#">지금 사용하러 가기</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="kodiak-feature-section">
+        <div class="kodiak-container">
+          <div class="kodiak-section-heading">
+            <h2>블록식 모딩 생성</h2>
+            <p>복잡한 코드 없이, 누구나 할 수 있는 클릭, 드래그 &amp; 드롭으로 제작</p>
+          </div>
+
+          <div class="kodiak-feature-grid">
+            <article class="kodiak-feature-card">
+              <div class="kodiak-feature-card__media">
+                <img src="img/home/feature-code-complex.png" alt="복잡한 코딩 때문에 어려워하는 화면 예시" />
+              </div>
+              <div class="kodiak-feature-card__body">
+                <h3>코딩 필요 없습니다</h3>
+                <p>게임 모드 만드는 데 복잡하게 코딩할 필요 없습니다.</p>
+              </div>
+            </article>
+
+            <article class="kodiak-feature-card">
+              <div class="kodiak-feature-card__media">
+                <img src="img/home/feature-block-ui.png" alt="블록 UI로 드래그 앤 드롭하는 화면 예시" />
+              </div>
+              <div class="kodiak-feature-card__body">
+                <h3>드래그 &amp; 드롭, 또는 클릭</h3>
+                <p>간단하게 코딩없이 아주 오브 아이언 모드를 만들 수 있습니다.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="kodiak-footer"></div>
+  </div>
+
+  <div class="kodiak-backdrop" hidden></div>
+
+  <section class="kodiak-modal" id="support-modal" role="dialog" aria-modal="true" aria-labelledby="support-modal-title" hidden>
+    <div class="kodiak-modal__dialog">
+      <button class="kodiak-modal__close" type="button" aria-label="후원 팝업 닫기" data-close-modal>&times;</button>
+      <h2 id="support-modal-title">후원하기</h2>
+      <p>KodiakX 제작을 응원해주시면 더 빠르게 기능을 추가할 수 있습니다.</p>
+      <div class="kodiak-modal__actions">
+        <a class="kodiak-button kodiak-button--primary kodiak-button--large" href="https://www.paypal.com/" target="_blank" rel="noreferrer">PayPal</a>
+        <a class="kodiak-button kodiak-button--ghost kodiak-button--large" href="https://www.patreon.com/" target="_blank" rel="noreferrer">Patreon</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="kodiak-modal kodiak-modal--consent" id="consent-modal" role="dialog" aria-modal="true" aria-labelledby="consent-modal-title" hidden>
+    <div class="kodiak-modal__dialog">
+      <h2 id="consent-modal-title">이용 동의</h2>
+      <p>이 사이트는 쿠키 및 로컬 저장소를 사용해 언어 설정, 이용 동의 여부 등 기본적인 사용 상태를 저장할 수 있습니다.</p>
+      <p>툴 사용 전 기본 안내에 동의한 경우에만 베타 기능을 이용할 수 있습니다.</p>
+      <div class="kodiak-modal__actions">
+        <button class="kodiak-button kodiak-button--primary kodiak-button--large" type="button" data-accept-consent>동의하고 시작하기</button>
+        <button class="kodiak-button kodiak-button--ghost kodiak-button--large" type="button" data-decline-consent>취소</button>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/home/script.js"></script>
+</body>
+</html>
