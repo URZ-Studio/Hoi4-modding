@@ -3,93 +3,167 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="KodiakX HOI4 Modding Tool 랜딩 페이지 베타" />
-  <title>KodiakX | HOI4 Modding Tool</title>
+  <meta name="theme-color" content="#09101d" />
+  <meta name="description" content="KodiakX HOI4 Modding Studio — 국민중점과 이벤트 구조를 화면에서 설계하는 모딩 편집기 시안." />
+  <title>KodiakX HOI4 Modding Studio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/home/style.css" />
 </head>
-<body>
-  <div class="kodiak-page-shell">
+<body class="studio-site">
+  <div class="kodiak-page-shell studio-home">
     <div id="kodiak-header"></div>
 
     <main>
-      <section class="kodiak-hero">
-        <div class="kodiak-hero__overlay"></div>
-        <div class="kodiak-hero__inner kodiak-container">
-          <div class="kodiak-hero__content">
-            <p class="kodiak-eyebrow">BLOCK MODDING BETA</p>
-            <h1>HOI4 Modding Tool</h1>
-            <p class="kodiak-hero__text">쉽고 빠르게 모드를 만드는 방법</p>
-            <div class="kodiak-hero__actions">
-              <a class="kodiak-button kodiak-button--ghost kodiak-button--large" href="#">사용법 확인하기</a>
-              <a class="kodiak-button kodiak-button--primary kodiak-button--large" href="tool.html">지금 사용하러 가기</a>
+      <section class="studio-hero" aria-labelledby="studio-title">
+        <div class="kodiak-container studio-hero__grid">
+          <div class="studio-hero__copy">
+            <p class="studio-eyebrow"><span class="studio-eyebrow__mark"></span>KODIAKX <span>/</span> HOI4 MODDING STUDIO</p>
+            <h1 id="studio-title">한 나라의 다음 역사를<br /><em>직접 설계하세요.</em></h1>
+            <p class="studio-hero__lead">국민중점의 갈림길과 이벤트의 흐름을 먼저 화면에 펼쳐보세요. KodiakX는 HOI4 모드를 구조부터 정리하는 시각형 편집기 콘셉트입니다.</p>
+
+            <div class="studio-hero__actions">
+              <a class="studio-action studio-action--primary" href="tool.html">편집기 미리보기 열기</a>
+              <a class="studio-action studio-action--secondary" href="#features">어떤 작업을 할 수 있나요?</a>
             </div>
+
+            <div class="studio-hero__topics" aria-label="편집기 설계 범위">
+              <span>국민중점</span>
+              <span>이벤트와 결정</span>
+              <span>모드 파일 구조</span>
+            </div>
+
+            <p class="studio-beta-note"><span class="studio-beta-note__dot"></span> UI 시연 단계 · 프로젝트 저장과 실제 코드 출력은 개발 중입니다.</p>
+          </div>
+
+          <figure class="studio-editor-preview" id="editor-preview" aria-labelledby="editor-preview-title">
+            <figcaption class="studio-window-bar">
+              <span class="studio-window-lights" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span id="editor-preview-title">KODIAKX EDITOR <span>/</span> NATIONAL FOCUS</span>
+              <span class="studio-window-badge">UI CONCEPT</span>
+            </figcaption>
+
+            <div class="studio-editor-toolbar">
+              <div class="studio-project-name"><span class="studio-project-mark">K</span><span><strong>Canada</strong><small>국민중점 트리 · 예제 화면</small></span></div>
+              <div class="studio-toolbar-actions"><span class="studio-save-state"><i></i> 미리보기</span><button type="button" disabled aria-label="미리보기 화면의 저장 버튼">저장</button><button class="studio-toolbar-export" type="button" disabled>내보내기</button></div>
+            </div>
+
+            <div class="studio-editor-layout">
+              <aside class="studio-side-panel studio-file-panel" aria-label="예제 파일 메뉴">
+                <p class="studio-panel-label">PROJECT</p>
+                <strong class="studio-project-title">CANADA DEMO</strong>
+                <div class="studio-file-group">
+                  <span class="studio-file-group__title">MOD CONTENT</span>
+                  <span class="studio-file-entry is-active"><i class="studio-file-icon studio-file-icon--tree"></i> 국민중점</span>
+                  <span class="studio-file-entry"><i class="studio-file-icon studio-file-icon--event"></i> 이벤트</span>
+                  <span class="studio-file-entry"><i class="studio-file-icon studio-file-icon--decision"></i> 결정</span>
+                  <span class="studio-file-entry"><i class="studio-file-icon studio-file-icon--spirit"></i> 국민정신</span>
+                </div>
+                <div class="studio-side-foot"><span class="studio-avatar">K</span><span><strong>Demo project</strong><small>로컬 미리보기</small></span></div>
+              </aside>
+
+              <section class="studio-canvas-panel" aria-label="국민중점 트리 예시">
+                <div class="studio-canvas-heading"><div><span class="studio-panel-label">NATIONAL FOCUS</span><strong>Canada · A New Direction</strong></div><span class="studio-canvas-zoom">− &nbsp; 100% &nbsp; +</span></div>
+                <div class="studio-focus-canvas">
+                  <div class="studio-focus-tree">
+                    <div class="studio-focus-tree__root">
+                      <article class="studio-focus-card studio-focus-card--root"><span class="studio-focus-index">01 <i>START</i></span><strong>연방의 방향을 정하다</strong><small>정치 · 70일</small></article>
+                    </div>
+                    <div class="studio-focus-tree__branches">
+                      <div class="studio-focus-tree__branch">
+                        <article class="studio-focus-card studio-focus-card--selected"><span class="studio-focus-index">02 <i>SELECTED</i></span><strong>대평원 산업 확장</strong><small>산업 · 선행 중점 1개</small></article>
+                      </div>
+                      <div class="studio-focus-tree__branch">
+                        <article class="studio-focus-card"><span class="studio-focus-index">03 <i>AVAILABLE</i></span><strong>북부 항로 확보</strong><small>해군 · 선행 중점 1개</small></article>
+                      </div>
+                    </div>
+                    <div class="studio-focus-tree__end"><span></span><span></span></div>
+                  </div>
+                  <div class="studio-canvas-caption"><span>3개 중점 노드</span><span>연결 구조 시안</span></div>
+                </div>
+              </section>
+
+              <aside class="studio-side-panel studio-inspector" aria-label="선택한 중점 속성 예시">
+                <div class="studio-inspector-heading"><span class="studio-panel-label">INSPECTOR</span><span class="studio-inspector-dots">•••</span></div>
+                <div class="studio-inspector-icon">✦</div>
+                <span class="studio-panel-label">SELECTED FOCUS</span>
+                <strong class="studio-inspector-title">대평원 산업 확장</strong>
+                <div class="studio-property"><span>고유 ID</span><code>KX_CAN_industry</code></div>
+                <div class="studio-property"><span>완료 기간</span><strong>70일</strong></div>
+                <div class="studio-property"><span>선행 조건</span><strong>연방의 방향</strong></div>
+                <div class="studio-inspector-reward"><span>예상 효과</span><strong>민간 공장 +2</strong></div>
+              </aside>
+            </div>
+
+            <div class="studio-editor-status"><span><i></i> PREVIEW ONLY</span><span>예제 데이터 · 실제 저장 기능 없음</span><span>100%</span></div>
+          </figure>
+        </div>
+        <div class="studio-hero__bottom kodiak-container"><span>PLAN THE FOCUS TREE</span><span>·</span><span>SHAPE THE EVENT FLOW</span><span>·</span><span>BUILD YOUR OWN HISTORY</span></div>
+      </section>
+
+      <section class="studio-section studio-features" id="features" aria-labelledby="features-title">
+        <div class="kodiak-container">
+          <div class="studio-section-heading">
+            <p class="studio-section-kicker">THE WORKSPACE</p>
+            <h2 id="features-title">모드를 만들 때 필요한 구조를<br /><em>먼저 한눈에.</em></h2>
+            <p>파일을 열기 전에 아이디어의 이름과 조건부터 정리하는 편집기 화면을 준비하고 있습니다.</p>
+          </div>
+
+          <div class="studio-feature-grid">
+            <article class="studio-feature-card">
+              <div class="studio-feature-card__top"><span>01</span><span class="studio-feature-tag">NATIONAL FOCUS</span></div>
+              <div class="studio-mini-tree" aria-hidden="true"><i></i><i></i><i></i><b></b></div>
+              <h3>국민중점 트리</h3>
+              <p>중점의 이름, 기간, 선행 조건을 노드로 놓고 국가의 다음 선택을 설계합니다.</p>
+              <div class="studio-feature-meta"><span>이름</span><span>선행 조건</span><span>보상</span></div>
+            </article>
+
+            <article class="studio-feature-card">
+              <div class="studio-feature-card__top"><span>02</span><span class="studio-feature-tag">EVENTS &amp; DECISIONS</span></div>
+              <div class="studio-flow-preview" aria-hidden="true"><span>조건</span><i></i><span>선택지</span><i></i><span>결과</span></div>
+              <h3>이벤트와 결정</h3>
+              <p>조건에서 선택지, 효과까지 이어지는 흐름을 정리해 이야기의 분기를 살핍니다.</p>
+              <div class="studio-feature-meta"><span>트리거</span><span>선택지</span><span>효과</span></div>
+            </article>
+
+            <article class="studio-feature-card">
+              <div class="studio-feature-card__top"><span>03</span><span class="studio-feature-tag">PROJECT FILES</span></div>
+              <div class="studio-file-preview" aria-hidden="true"><span>▸ common</span><span class="is-indented">▸ national_focus</span><span class="is-indented-2">▸ events</span></div>
+              <h3>모드 파일 구조</h3>
+              <p>중점, 이벤트 등 콘텐츠가 게임의 어느 폴더와 파일에 놓이는지 함께 확인합니다.</p>
+              <div class="studio-feature-meta"><span>정리</span><span>검토</span><span>출력 예정</span></div>
+            </article>
           </div>
         </div>
       </section>
 
-      <section class="kodiak-feature-section">
-        <div class="kodiak-container">
-          <div class="kodiak-section-heading">
-            <h2>블록식 모딩 생성</h2>
-            <p>복잡한 코드 없이, 누구나 할 수 있는 클릭, 드래그 &amp; 드롭으로 제작</p>
+      <section class="studio-section studio-workflow" id="workflow" aria-labelledby="workflow-title">
+        <div class="kodiak-container studio-workflow__inner">
+          <div class="studio-section-heading studio-section-heading--left">
+            <p class="studio-section-kicker">A CLEARER START</p>
+            <h2 id="workflow-title">첫 중점에서<br /><em>국가의 흐름까지.</em></h2>
+            <p>편집기에서 목표로 하는 작업 순서입니다. 현재 공개된 버전은 화면 시연 단계입니다.</p>
           </div>
+          <ol class="studio-steps">
+            <li><span>01</span><strong>아이디어 선택</strong><p>국가와 바꾸고 싶은 역사의 순간을 정합니다.</p></li>
+            <li><span>02</span><strong>구조 배치</strong><p>중점과 이벤트를 읽기 쉬운 순서로 놓습니다.</p></li>
+            <li><span>03</span><strong>조건 연결</strong><p>선행 조건과 결과가 의도대로 이어지는지 살핍니다.</p></li>
+            <li><span>04</span><strong>파일로 완성</strong><p>실제 저장과 게임 파일 출력 기능을 준비하고 있습니다.</p></li>
+          </ol>
+        </div>
+      </section>
 
-          <div class="kodiak-feature-grid">
-            <article class="kodiak-feature-card">
-              <div class="kodiak-feature-card__media">
-                <img src="img/home/feature-code-complex.png" alt="복잡한 코딩 때문에 어려워하는 화면 예시" />
-              </div>
-              <div class="kodiak-feature-card__body">
-                <h3>코딩 필요 없습니다</h3>
-                <p>게임 모드 만드는 데 복잡하게 코딩할 필요 없습니다.</p>
-              </div>
-            </article>
-
-            <article class="kodiak-feature-card">
-              <div class="kodiak-feature-card__media">
-                <img src="img/home/feature-block-ui.png" alt="블록 UI로 드래그 앤 드롭하는 화면 예시" />
-              </div>
-              <div class="kodiak-feature-card__body">
-                <h3>드래그 &amp; 드롭, 또는 클릭</h3>
-                <p>간단하게 코딩없이 아주 오브 아이언 모드를 만들 수 있습니다.</p>
-              </div>
-            </article>
-          </div>
+      <section class="studio-final-cta" aria-labelledby="cta-title">
+        <div class="kodiak-container studio-final-cta__inner">
+          <div><p class="studio-section-kicker">YOUR NEXT HISTORY</p><h2 id="cta-title">아이디어를 펼쳐볼 준비가 됐나요?</h2><p>편집기 시연 화면에서 KodiakX의 작업 공간을 둘러보세요.</p></div>
+          <a class="studio-action studio-action--primary" href="tool.html">편집기 화면 열기</a>
         </div>
       </section>
     </main>
 
     <div id="kodiak-footer"></div>
   </div>
-
-  <div class="kodiak-backdrop" hidden></div>
-
-  <section class="kodiak-modal" id="support-modal" role="dialog" aria-modal="true" aria-labelledby="support-modal-title" hidden>
-    <div class="kodiak-modal__dialog">
-      <button class="kodiak-modal__close" type="button" aria-label="후원 팝업 닫기" data-close-modal>&times;</button>
-      <h2 id="support-modal-title">후원하기</h2>
-      <p>KodiakX 제작을 응원해주시면 더 빠르게 기능을 추가할 수 있습니다.</p>
-      <div class="kodiak-modal__actions">
-        <a class="kodiak-button kodiak-button--primary kodiak-button--large" href="https://www.paypal.com/" target="_blank" rel="noreferrer">PayPal</a>
-        <a class="kodiak-button kodiak-button--ghost kodiak-button--large" href="https://www.patreon.com/" target="_blank" rel="noreferrer">Patreon</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="kodiak-modal kodiak-modal--consent" id="consent-modal" role="dialog" aria-modal="true" aria-labelledby="consent-modal-title" hidden>
-    <div class="kodiak-modal__dialog">
-      <h2 id="consent-modal-title">이용 동의</h2>
-      <p>이 사이트는 쿠키 및 로컬 저장소를 사용해 언어 설정, 이용 동의 여부 등 기본적인 사용 상태를 저장할 수 있습니다.</p>
-      <p>툴 사용 전 기본 안내에 동의한 경우에만 베타 기능을 이용할 수 있습니다.</p>
-      <div class="kodiak-modal__actions">
-        <button class="kodiak-button kodiak-button--primary kodiak-button--large" type="button" data-accept-consent>동의하고 시작하기</button>
-        <button class="kodiak-button kodiak-button--ghost kodiak-button--large" type="button" data-decline-consent>취소</button>
-      </div>
-    </div>
-  </section>
 
   <script src="js/home/script.js"></script>
 </body>
